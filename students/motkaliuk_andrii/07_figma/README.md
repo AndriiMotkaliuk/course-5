@@ -1,14 +1,16 @@
+https://andriimotkaliuk.github.io/course-5/students/motkaliuk_andrii/07_figma/
+
 1 Colour:
-    background: 
-    hero block, Skills section, Contacts section: #FFF
-    About me section: #070707
-    Portfolio section: #F6F6F6
+background:
+hero block, Skills section, Contacts section: #FFF
+About me section: #070707
+Portfolio section: #F6F6F6
 
 2 Fonts:
-    header: 
-        color: var(--black, #070707);
-        font-size: 18px;
-        font-family: Open Sans;
+header:
+color: var(--black, #070707);
+font-size: 18px;
+font-family: Open Sans;
 
     hero block:
         color: var(--black, #070707);
@@ -66,11 +68,8 @@
         font-family: Open Sans;
         font-weight: 700;
         letter-spacing: 1.8px;
-        
+
     Footer section:
         color: #828282;
         font-size: 14px;
         font-family: Open Sans;
-
-
-
