@@ -1,0 +1,95 @@
+h2~p {
+    color: #070707;
+    text-align: center;
+    font-size: 18px;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+a[class="portfolio_links"] {
+    color: #070707;
+    text-align: center;
+    font-size: 18px;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    color: #070707;
+    font-size: 47.339px;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+h2 {
+    color: #070707;
+    text-align: center;
+    font-size: 34px;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+nav {
+    color: #828282;
+    font-style: normal;
+    font-size: 18px;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li>a {
+    text-decoration: none;
+    color: #828282;
+}
+
+main {
+    background-color: #F6F6F6;
+}
+
+.portfolio {
+    background-color: #F6F6F6;
+}
+
+.stars {
+    display: inline-block;
+    margin-right: 9px
+}
+
+.last_star {
+    display: inline-block
+}
+
+.skills_signature {
+    color: #828282;
+    text-align: center;
+    font-size: 14px;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.portfolio_links {
+    color: #070707;
+
+}
+
+.button {
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+footer>p {
+    color: #828282;
+    text-align: center;
+    font-size: 14px;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
