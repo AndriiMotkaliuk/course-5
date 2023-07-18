@@ -1,0 +1,106 @@
+.hero-name {
+    color: $color-mid-gray;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    text-transform: capitalize;
+    position: relative;
+    padding: 70px 0 25px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        max-width: 100px;
+        width: 100%;
+        left: calc(50% - 50px);
+        bottom: 0;
+        height: 1px;
+        background-color: $color-gold;
+    }
+}
+
+.hero-position {
+    color: $color-mid-gray;
+    text-align: center;
+    font-family: Raleway, $fallback;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-transform: capitalize;
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.links-icon {
+    padding-left: 5px;
+
+    &:first-child {
+        padding-left: 0;
+    }
+}
+
+.description {
+    margin: 0 auto;
+    color: #333;
+    text-align: center;
+    font-family: Raleway, $fallback;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    position: relative;
+    padding-bottom: 20px;
+    max-width: 430px;
+}
+
+.pseudo-element {
+    position: relative;
+
+    &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        max-width: 50px;
+        width: 100%;
+        left: calc(50% - 25px);
+        bottom: 0;
+        border-bottom: 4px solid $color-gold;
+    }
+
+    &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        max-width: 20px;
+        width: 100%;
+        left: calc(50% - 14px);
+        bottom: 0;
+        border-left: 4px solid $default-body-color;
+        border-right: 4px solid $default-body-color;
+        height: 4px;
+        background-color: transparent;
+    }
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.view-profile-button {
+    color: #666;
+    font-family: Open Sans, $fallback;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid $color-gold;
+    padding: 5px 10px;
+}
