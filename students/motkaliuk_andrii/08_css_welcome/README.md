@@ -1,4 +1,4 @@
-https://andriimotkaliuk.github.io/course-5/students/motkaliuk_andrii/07_figma/
+https://andriimotkaliuk.github.io/course-5/students/motkaliuk_andrii/08_css_welcome/index.html
 
 1 Colour:
 background:
