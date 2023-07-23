@@ -1,13 +1,21 @@
 body {
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    color: #070707;
+}
+
+.header {
     max-width: 940px;
     margin: 0 auto;
 }
 
 .nav {
-    height: 75px;
-    border-color: #070707;
     border-style: solid;
     border-width: 0 0 1px;
+    padding-bottom: 30px;
+}
+
+.menu {
+    text-align: center;
 }
 
 .menu__item {
@@ -16,22 +24,20 @@ body {
     color: #828282;
     text-decoration: none;
     font-size: 18px;
-    font-family: Open Sans, Arial, Helvetica, sans-serif;
     font-weight: 400;
-}
-
-.item_1 {
-    padding-left: 225px;
 }
 
 .item_next {
     padding-left: 40px;
 }
 
+.hero_block {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
 h1 {
-    color: #070707;
     font-size: 48px;
-    font-family: Open Sans, Arial, Helvetica, sans-serif;
     font-weight: 700;
     margin-top: 45px;
 }
@@ -42,14 +48,13 @@ h1 {
 
 .about_me_container {
     background-color: #F6F6F6;
-    height: 517px
+    margin: 0 auto;
+    padding-bottom: 100px;
 }
 
 h2 {
-    color: #070707;
     text-align: center;
     font-size: 34px;
-    font-family: Open Sans, Arial, Helvetica, sans-serif;
     font-weight: 700;
 }
 
@@ -61,10 +66,8 @@ h2 {
 .about_item1 {
     margin-top: 30px;
     line-height: 1.4em;
-    color: #070707;
     text-align: center;
     font-size: 18px;
-    font-family: Open Sans, Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 
@@ -74,36 +77,30 @@ h2 {
 }
 
 p {
-    color: #070707;
     text-align: center;
     font-size: 18px;
-    font-family: Open Sans, Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 
 h2 {
-    color: #070707;
     text-align: center;
     font-size: 34px;
-    font-family: Open Sans, Arial, Helvetica, sans-serif;
     font-weight: 700;
 }
 
 .skills_block {
-    height: 580px;
+    max-width: 940px;
+    margin: 0 auto;
+    padding-top: 110px;
+    padding-bottom: 90px;
 
-}
-
-.skills_header {
-    padding-top: 100px;
 }
 
 .skills_description {
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 [class*=skills_item] {
-    ;
     display: inline-block;
     padding-top: 75px;
 }
@@ -137,12 +134,10 @@ h2 {
     color: #828282;
     text-align: center;
     font-size: 14px;
-    font-family: Open Sans, Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 
 .stars {
-
     display: inline-block;
     width: 26px;
     height: 26px;
@@ -158,15 +153,14 @@ h2 {
 }
 
 .portfolio {
-    display: inline-block;
+    margin: 0 auto;
     background-color: #F6F6F6;
     padding: 120px 0 110px;
-    max-height: 2240px;
-    height: 100%;
 }
 
 .fashion-store {
     padding-top: 75px;
+    text-align: center;
 }
 
 .portfolio_image {
@@ -185,14 +179,12 @@ li>a {
 }
 
 .reebok-store {
-    padding-top: 100px;
-}
-
-.reebok-store {
+    text-align: center;
     padding-top: 100px;
 }
 
 .braun {
+    text-align: center;
     padding-top: 100px;
 }
 
@@ -206,17 +198,14 @@ a:hover {
 }
 
 .footer-box {
-    height: 670px;
-}
-
-.contacts_header {
+    margin: 0 auto;
     padding-top: 110px;
+    padding-bottom: 100px;
 }
 
 .contacts-description {
     padding-top: 25px;
     color: #070707;
-    font-family: Open Sans;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.3em;
@@ -233,7 +222,6 @@ a:hover {
     color: #FFF;
     text-align: center;
     font-size: 18px;
-    font-family: Open Sans, Arial, Helvetica, sans-serif;
     font-weight: 700;
     letter-spacing: 1.8px;
     width: 180px;
@@ -243,7 +231,7 @@ a:hover {
 }
 
 .links_box {
-    display: inline-block;
+    text-align: center;
     margin: 0 auto;
 }
 
@@ -254,7 +242,7 @@ a:hover {
 }
 
 [class=follow-links]:first-child {
-    padding-left: 300px;
+    padding-left: 0px;
 }
 
 .footer_description {
@@ -262,7 +250,6 @@ a:hover {
     color: #828282;
     text-align: center;
     font-size: 14px;
-    font-family: Open Sans, Arial, Helvetica, sans-serif;
     font-weight: 400;
     line-height: 1.3em;
 }
