@@ -1,0 +1,43 @@
+.we-design {
+    background-image: url(../images/curve.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom 100px;
+
+    &_list {
+        padding-bottom: 75px;
+
+    }
+
+    &_header {
+        text-align: center;
+        font-size: 36px;
+        line-height: 1.2em;
+        padding-bottom: 55px;
+    }
+
+    &_item_header {
+        padding-top: 30px;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    &_content {
+        padding-top: 20px;
+        font-weight: 500;
+        line-height: 26px;
+    }
+
+    &_button_container {
+        padding-top: 85px;
+        padding-left: calc(50% - 90px);
+    }
+
+    &_button {
+        background: $orange-color;
+        color: $white-color;
+        font-family: 'Poppins', $fallback;
+        font-weight: 700;
+    }
+}

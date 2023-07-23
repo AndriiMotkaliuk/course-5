@@ -1,0 +1,27 @@
+.header .row {
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+}
+
+.menu_item {
+    display: inline-block;
+
+    &>a {
+        color: $black-color;
+    }
+
+    &:not(:first-child) {
+        padding-left: 20px;
+    }
+
+    &>a:hover {
+        color: $orange-color;
+    }
+}
