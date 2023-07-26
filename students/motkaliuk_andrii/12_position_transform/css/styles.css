@@ -15,12 +15,14 @@
      position: sticky;
      top: 0px;
      background-color: white;
+     z-index: 2;
  }
 
  .container {
      display: flex;
      justify-content: space-between;
-     padding: 0 120px;
+     padding: 0 15px;
+     margin: 0 105px;
      max-width: 1200px;
      width: 100%;
      margin: 0 auto;
@@ -101,6 +103,7 @@
      line-height: 48px;
      letter-spacing: 1.44px;
      text-transform: uppercase;
+     z-index: 2;
  }
 
  .psevdo-line sup {
@@ -150,7 +153,7 @@
  .psevdo-line {
      position: -webkit-sticky;
      position: sticky;
-     top: 100px;
+     top: 20px;
  }
 
  .main-content>.content_item {
