@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form class="form" action="#" method="post" autocomplete="off">
+            <div class="row">
+                <div class="col-5">
+                    <label for="full-name">Повне ім'я</label>
+                </div>
+                <div class="col-7">
+                    <input type="text" id="full-name" name="full-name" required>
+                </div>
+                <div class="col-5">
+                    <label for="email">Email:</label>
+                </div>
+                <div class="col-7">
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="col-5">
+                    <label for="password">Пароль</label>
+                </div>
+                <div class="col-7">
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="col-5">
+                    <label for="password">Пароль ще раз</label>
+                </div>
+                <div class="col-7">
+                    <input type="password" id="password-again" name="password-again" required>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-5">
+                    <p>Стать:</p>
+                </div>
+                <div class="col-7">
+                    <div class="sex">
+                        <div><input type="radio" id="sex-male" name="sex" value="male">
+                            <label for="sex-male">чоловіча</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sex-female" name="sex" value="female">
+                            <label for="sex-female">жіноча</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <label for="age">Вік</label>
+                </div>
+                <div class="col-7">
+                    <input type="text" id="age" name="age">
+                </div>
+            </div>
+            <div>
+                <div class="row">
+                    <div class="col-5">
+                        <label for="course">Курс</label>
+                    </div>
+                    <div class="col-7">
+                        <select id="course" required>
+                            <option value="" disabled selected>-=Виберіть курс=-</option>
+                            <option value="front-end">Front End 2.0</option>
+                            <option value="python">Python</option>
+                            <option value="sql">SQL</option>
+                            <option value="uiux">UI/UX</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="row">
+                    <div class="col-5">
+                        <label for="address">Повна адреса</label>
+                    </div>
+                    <div class="col-7">
+                        <textarea name="address" id="address" placeholder="Країна, регіон, місто/селище, вулиця"
+                            rows="4" cols="26"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="row">
+                    <div class="col-12">
+                        <input type="checkbox" id="data-processing" name="data-processing"
+                            value="Я погоджуюсь з обробкою персональних даних" required>
+                        <label for="rules-familliar"> Я погоджуюсь з обробкою персональних даних</label>
+                    </div>
+                    <div class="col-12">
+                        <input type="checkbox" id="rules-familliar" name="rules-familliar"
+                            value="Я ознайомений з правилами" required>
+                        <label for="vehicle2"> Я ознайомений з правилами</label>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="reset" value="Очистити форму">
+                    </div>
+                    <div class="col-6">
+                        <input type="submit" value="Зареєструватися">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>

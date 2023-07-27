@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $default-body-color;
+}
+
+// @include grid;
+
+.container {
+    background-color: $light-gray-color;
+    display: flex;
+    padding: $container-padding;
+    max-width: $container-max-width;
+    margin: 0 auto;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.col-12 {
+    max-width: calc(100% / 12 * 12);
+    width: 100%;
+}
+
+.col-8 {
+    max-width: calc(100% / 12 * 8);
+    width: 100%;
+}
+
+.col-7 {
+    max-width: calc(100% / 12 * 7);
+    width: 100%;
+}
+
+.col-6 {
+    max-width: calc(100% / 12 * 6);
+    width: 100%;
+}
+
+.col-5 {
+    max-width: calc(100% / 12 * 5);
+    width: 100%;
+}
+
+.col-4 {
+    max-width: calc(100% / 12 * 4);
+    width: 100%;
+}

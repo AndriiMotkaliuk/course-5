@@ -1,0 +1,36 @@
+[class*="col"] {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+input,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 225px;
+    height: 25px;
+}
+
+.buttons .col-6 {
+    display: flex;
+    justify-content: center;
+}
+
+input[type="radio"]+label {
+    padding-left: 5px;
+}
+
+.sex {
+    display: flex;
+    max-width: 200px;
+    width: 100%;
+    justify-content: space-between;
+}
