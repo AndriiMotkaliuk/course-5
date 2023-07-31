@@ -16,68 +16,57 @@
 </head>
 
 <body>
-    <div class="site_container">
-        <header class="header_container">
-            <div class="emblem">
+    <header class="header_container">
+        <div class="logo">
+            <img src="./images/logo.svg" alt="logo">
+        </div>
+        <nav class="navigation_list">
+            <ul>
+                <li class="navigation_item"><a href="#">Product</a></li>
+                <li class="navigation_item"><a href="#">Customers</a></li>
+                <li class="navigation_item"><a href="#">Pricing</a></li>
+                <li class="navigation_item"><a href="#">Resources</a></li>
+            </ul>
+        </nav>
+        <div class="sign-in-up">
+            <a class="sign-in_button" href="#">Sign In</a>
+            <a class="sign-up_button" href="#">Sign Up</a>
+
+        </div>
+    </header>
+    <footer>
+        <div class="footer_container">
+            <div class="footer_icon">
                 <img src="./images/logo.svg" alt="logo">
             </div>
-            <nav class="navigation_list">
+            <div class="quick_links_block">
+                <h3 class="footer_headers">Quick Links</h3>
                 <ul>
-                    <li class="navigation_item"><a href="#">Product</a></li>
-                    <li class="navigation_item"><a href="#">Customers</a></li>
-                    <li class="navigation_item"><a href="#">Pricing</a></li>
-                    <li class="navigation_item"><a href="#">Resources</a></li>
+                    <li><a class="quick_links_item" href="#">About Us</a></li>
+                    <li><a class="quick_links_item" href="#">Blog</a></li>
+                    <li><a class="quick_links_item" href="#">Contacts</a></li>
+                    <li><a class="quick_links_item" href="#">FAQ</a></li>
                 </ul>
-            </nav>
-            <div class="sign_in_up">
-                <div class="sign_in">
-                    <button class="sign_in_button">Sign In</button>
-                </div>
-                <div class="sign_up">
-                    <button class="sign_up_button">Sign Up</button>
-                </div>
-
             </div>
-        </header>
-        <footer>
-            <div class="footer_container">
-                <div class="footer_icon">
-                    <img src="./images/logo.svg" alt="logo">
-                </div>
-                <div class="quick_links_block">
-                    <h3 class="footer_headers">Quick Links</h3>
-                    <div class="quick_links">
-                        <ul>
-                            <li><a class="quick_links_item" href="#">About Us</a></li>
-                            <li><a class="quick_links_item" href="#">Blog</a></li>
-                            <li><a class="quick_links_item" href="#">Contacts</a></li>
-                            <li><a class="quick_links_item" href="#">FAQ</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="legal_stuff_block">
-                    <h3 class="footer_headers">Legal Stuff</h3>
-                    <div class="legal_stuff">
-                        <ul>
-                            <li><a class="legal_stuff_item" href="#">Disclaimer</a></li>
-                            <li><a class="legal_stuff_item" href="#">Financing</a></li>
-                            <li><a class="legal_stuff_item" href="#">Privacy Policy</a></li>
-                            <li><a class="legal_stuff_item" href="#">Terms of Service</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="input_place">
-                    <h3 class="footer_headers">Knowing you're always on <br>the best energy deal.</h3>
-                    <div class="input_space_box">
-                        <input class="input_space" type="text" name="text_place" placeholder="Enter your phone Number">
-                    </div>
-                    <div class="footer_button_box">
-                        <button class="footer_button">Sign up Now</button>
-                    </div>
-                </div>
+            <div class="legal_stuff_block">
+                <h3 class="footer_headers">Legal Stuff</h3>
+                <ul>
+                    <li><a class="legal_stuff_item" href="#">Disclaimer</a></li>
+                    <li><a class="legal_stuff_item" href="#">Financing</a></li>
+                    <li><a class="legal_stuff_item" href="#">Privacy Policy</a></li>
+                    <li><a class="legal_stuff_item" href="#">Terms of Service</a></li>
+                </ul>
             </div>
-        </footer>
-    </div>
+            <div class="input_place">
+                <h3 class="footer_headers">Knowing you're always on <br>the best energy deal.</h3>
+                <form action="">
+                    <input class="input_space" type="text" id="phone-number" name="phone-number"
+                        placeholder="Enter your phone Number"><br>
+                    <input type="submit" value="Sign up Now">
+                </form>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
