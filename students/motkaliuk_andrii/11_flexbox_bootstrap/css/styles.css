@@ -5,9 +5,9 @@ body {
 
 .container {
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: 1230px;
     width: 100%;
-    padding: 0 120px;
+    padding: 0 15px;
     box-sizing: border-box;
 }
 
@@ -58,10 +58,6 @@ body {
 
 .sign-in-up {
     display: inline-block;
-}
-
-.sign-in {
-    display: inline-block;
     padding-left: 190px;
 }
 
@@ -81,11 +77,6 @@ body {
     padding: 13px 25px;
 }
 
-.sign-up {
-    display: inline-block;
-    padding-left: 32px;
-}
-
 .sign-up_button {
     color: #FFF;
     font-size: 16px;
@@ -93,6 +84,7 @@ body {
     border-radius: 4px;
     border: 1px solid #F90;
     padding: 13px 25px;
+    margin-left: 32px;
 }
 
 /* The design container */
@@ -212,8 +204,7 @@ body {
 /* Footer */
 .footer {
     display: flex;
-    max-width: 1200px;
-    width: 100%;
+    padding-bottom: 70px;
 }
 
 .footer_logo,
@@ -250,8 +241,8 @@ body {
     padding-top: 20px;
 }
 
-.quick-links>ul,
-.legal-stuff>ul {
+.quick_links_block ul,
+.legal_stuff_block ul {
     padding-top: 20px;
 }
 
@@ -268,32 +259,35 @@ body {
     display: inline-block;
 }
 
-.input_space_box {
-    padding-top: 20px;
-}
-
 .input_space {
+    margin-top: 25px;
     width: 320px;
     height: 50px;
-    color: #BCD0E5;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-family: inherit;
     font-size: 16px;
+    font-style: normal;
     font-weight: 400;
+    line-height: normal;
     padding-left: 10px;
     border-radius: 4px;
     border: 1px solid #BCD0E5;
 }
 
-.footer_button_box {
-    padding-top: 40px;
+.input_space::placeholder {
+    color: #BCD0E5;
 }
 
-.footer_button {
-    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+input[type="submit"] {
+    margin-top: 20px;
+    width: 180px;
+    height: 50px;
     color: #FFF;
-    padding: 13px 40px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-size: 16px;
+    font-style: normal;
     font-weight: 700;
+    line-height: normal;
     background-color: #F90;
+    border-radius: 4px;
     border: 1px solid #F90;
 }
