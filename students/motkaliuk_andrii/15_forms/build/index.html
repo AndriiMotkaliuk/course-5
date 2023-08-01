@@ -31,7 +31,7 @@
                     <input type="password" id="password" name="password" required>
                 </div>
                 <div class="col-5">
-                    <label for="password">Пароль ще раз</label>
+                    <label for="password-again">Пароль ще раз</label>
                 </div>
                 <div class="col-7">
                     <input type="password" id="password-again" name="password-again" required>
@@ -90,24 +90,22 @@
             <div>
                 <div class="row">
                     <div class="col-12">
-                        <input type="checkbox" id="data-processing" name="data-processing"
-                            value="Я погоджуюсь з обробкою персональних даних" required>
-                        <label for="rules-familliar"> Я погоджуюсь з обробкою персональних даних</label>
+                        <input type="checkbox" id="data-processing" name="data-processing" value="true" required>
+                        <label for="data-processing"> Я погоджуюсь з обробкою персональних даних</label>
                     </div>
                     <div class="col-12">
-                        <input type="checkbox" id="rules-familliar" name="rules-familliar"
-                            value="Я ознайомений з правилами" required>
-                        <label for="vehicle2"> Я ознайомений з правилами</label>
+                        <input type="checkbox" id="rules-familliar" name="rules-familliar" value="true" required>
+                        <label for="rules-familliar"> Я ознайомений з правилами</label>
                     </div>
                 </div>
             </div>
             <div class="buttons">
                 <div class="row">
                     <div class="col-6">
-                        <input type="reset" value="Очистити форму">
+                        <button type="reset" value="reset">Очистити форму</button>
                     </div>
                     <div class="col-6">
-                        <input type="submit" value="Зареєструватися">
+                        <button type="submit" value="submit">Зареєструватися</button>
                     </div>
                 </div>
             </div>
