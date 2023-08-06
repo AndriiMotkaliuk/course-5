@@ -1,0 +1,27 @@
+.form {
+
+    &__action {
+        display: flex;
+        justify-content: space-between;
+        background-color: $label-bg;
+        padding: 10px;
+    }
+}
+
+.btn {
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    border: 0;
+
+    &_secondary {
+        color: $orang-color;
+    }
+
+    &_primary {
+        color: $white-color;
+        background-color: $orang-color;
+    }
+}

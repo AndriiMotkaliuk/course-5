@@ -1,0 +1,25 @@
+$textarea-input-height: 150px;
+$icon-height: $textarea-input-height;
+
+
+.textarea {
+    width: 100%;
+    height: $textarea-input-height;
+    padding: 0;
+    border: 0;
+
+    &-icon {
+        background-color: $icon-bg;
+        width: 50px;
+        height: $textarea-input-height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__img {
+            width: $icon-img-size;
+            height: $icon-img-size;
+            fill: $icon-color;
+        }
+    }
+}
