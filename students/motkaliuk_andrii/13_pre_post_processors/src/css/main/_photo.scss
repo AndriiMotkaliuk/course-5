@@ -9,24 +9,23 @@
     align-items: center;
     position: relative;
     margin: 0 auto;
-    margin-top: 65px;
+    // margin-top: 65px;
 
     &::before {
         content: "";
         position: absolute;
-        width: 230px;
-        height: 432px;
-        margin: 0 auto;
+        top: -1px;
+        bottom: -1px;
+        width: 50%;
         background-color: $default-body-color;
     }
 
     &::after {
         content: "";
         position: absolute;
-        top: 100px;
-        bottom: 100px;
-        margin: 0 auto;
-        width: 432px;
+        right: -1px;
+        left: -1px;
+        height: 50%;
         background-color: $default-body-color;
     }
 }
