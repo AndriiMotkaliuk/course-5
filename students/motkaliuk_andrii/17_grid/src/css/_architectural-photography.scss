@@ -1,0 +1,121 @@
+.page {}
+
+.main {}
+
+html,
+.page {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+}
+
+[class*="__title"] {
+    color: #000;
+    text-align: center;
+    font-family: 'Delius Unicase', $fallback;
+    font-size: 36px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin: 0;
+    padding-bottom: 80px;
+}
+
+.architectural-photography {
+    padding-top: 120px;
+}
+
+.ap-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, minmax(auto, 370px));
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+
+        &:nth-child(4n+2),
+        &:nth-child(4n+3) {
+            grid-column-end: span 2;
+        }
+    }
+}
+
+.item {
+    position: relative;
+
+    &:hover .item__button-like,
+    &:hover .item__button-download {
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    &_blure {
+        // градієнт не працює, не знаю як це зробити
+        background: linear-gradient(0deg, #241F24 0%, rgba(91, 91, 91, 0.45) 34.11%, rgba(187, 186, 192, 0.26) 62.50%);
+        opacity: 0.8;
+
+        &:hover {
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+
+    &__author {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        padding: 10px;
+        color: #FFFFFF;
+    }
+
+    &__date {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        padding: 10px;
+        color: #FFFFFF;
+    }
+
+    &__button {
+        &-like {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            background: rgba(224, 224, 224, 0.50);
+            cursor: pointer;
+            opacity: 0;
+
+            &:hover {
+                background: #E0E0E0;
+            }
+        }
+
+        &-download {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            background: rgba(224, 224, 224, 0.50);
+            cursor: pointer;
+            opacity: 0;
+
+            &:hover {
+                background-color: #E0E0E0;
+            }
+        }
+    }
+}

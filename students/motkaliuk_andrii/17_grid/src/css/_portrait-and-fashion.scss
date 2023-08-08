@@ -1,0 +1,36 @@
+.portrait-and-fashion {
+    padding-top: 120px;
+}
+
+.paf-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, minmax(auto, 370px));
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+
+        &:nth-child(2) {
+            grid-area: 1 / 2 / span 2 / span 1;
+        }
+
+        &:nth-child(5) {
+            grid-area: 2 / 3 / span 2 / span 1;
+        }
+
+        &:nth-child(6) {
+            grid-area: 3 / 1 / span 2 / span 1;
+        }
+
+        &:nth-child(8) {
+            grid-area: 4 / 2 / span 1 / span 2;
+        }
+
+        &:nth-child(9) {
+            grid-area: 5 / 1 / span 1 / span 2;
+        }
+    }
+}

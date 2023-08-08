@@ -1,0 +1,28 @@
+.still-life {
+    padding-top: 120px;
+}
+
+.sl-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, minmax(auto, 370px));
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(5) {
+            grid-column-end: span 2;
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+            grid-row-end: span 2;
+        }
+
+    }
+}
