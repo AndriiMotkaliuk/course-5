@@ -47,6 +47,10 @@
     padding: 30px 50px 0 0;
     font-size: 18px;
     line-height: 28px;
+
+    @include media(md) {
+        padding-right: 0px;
+    }
 }
 
 .button_container {

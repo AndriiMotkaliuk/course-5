@@ -19,7 +19,7 @@
     &>a {
         color: $black-color;
 
-        @include media(md) {
+        @include media(lg) {
             padding: 15px 10px;
         }
     }
