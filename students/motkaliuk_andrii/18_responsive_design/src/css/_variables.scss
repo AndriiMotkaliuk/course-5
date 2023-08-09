@@ -1,0 +1,27 @@
+$orange-color: #F90;
+$white-color: #FFF;
+$gray-color: #544837;
+$blue-color: #BCD0E5;
+$black-color: #2F281E;
+
+$default-body-color: $white-color;
+
+// fonts
+$default-font-name: 'Montserrat';
+$fallback: Arial, Helvetica, sans-serif;
+$main-font: $default-font-name, $fallback;
+
+$container-padding: 0 15px;
+$container-max-width: 1200px;
+
+$font-path: './fonts/';
+$default-width: 1200px;
+$gap: 5px;
+
+$breack-points: (
+    "lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 480px
+);

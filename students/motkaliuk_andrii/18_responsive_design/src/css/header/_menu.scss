@@ -1,0 +1,34 @@
+.header .row {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+
+    @include media(lg) {
+        padding-top: 10px;
+    }
+}
+
+.menu_item {
+    display: inline-block;
+
+    &>a {
+        color: $black-color;
+
+        @include media(md) {
+            padding: 15px 10px;
+        }
+    }
+
+    &:not(:first-child) {
+        padding-left: 20px;
+    }
+
+    &>a:hover {
+        color: $orange-color;
+    }
+}

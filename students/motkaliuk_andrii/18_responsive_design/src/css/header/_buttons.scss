@@ -1,0 +1,24 @@
+.sign-in-up {
+    display: flex;
+    justify-content: end;
+    padding-top: 15px;
+
+    @include media(lg) {
+        justify-content: center;
+    }
+}
+
+.sign-in_button {
+    color: $black-color;
+    background-color: $white-color;
+    border: 1px solid $blue-color;
+    padding: 13px 25px;
+}
+
+.sign-up_button {
+    color: $white-color;
+    background-color: $orange-color;
+    border: 1px solid $orange-color;
+    padding: 13px 25px;
+    margin-left: 32px;
+}

@@ -1,0 +1,66 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/montserrat-v25-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/montserrat-v25-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: url('fonts/montserrat-v25-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/montserrat-v25-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/poppins-v20-latin-700.woff2') format('woff2');
+}
+
+body {
+    font-family: $main-font;
+    color: $gray-color;
+    background-color: $default-body-color;
+}
+
+@include grid;
+
+[class*="header"] {
+    color: $black-color;
+    font-weight: 700;
+}
+
+[class$="_button"] {
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 13px 40px;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    padding-bottom: 70px;
+}

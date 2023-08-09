@@ -1,0 +1,7 @@
+.logo {
+    display: flex;
+
+    @include media(lg) {
+        justify-content: center;
+    }
+}
