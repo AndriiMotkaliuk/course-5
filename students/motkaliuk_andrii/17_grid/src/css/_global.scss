@@ -7,7 +7,7 @@ body {
     font-family: $main-font;
     background-color: $default-body-color;
     font-size: 20px;
-    color: #E0E0E0;
+    color: $white-color;
 }
 
 @include grid;
