@@ -1,0 +1,32 @@
+.footer_headers {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+
+    @include media(md) {
+        padding-top: 20px;
+    }
+}
+
+.quick-links_block {
+    padding-left: 30px;
+
+    @include media(md) {
+        padding-left: 0;
+    }
+}
+
+.quick-links_item:first-child,
+.legal-stuff_item:first-child,
+.quick-links_block ul,
+.legal-stuff_block ul {
+    padding-top: 20px;
+}
+
+
+.quick-links_item,
+.legal-stuff_item {
+    color: $gray-color;
+    font-weight: 500;
+    line-height: 2.6em;
+}

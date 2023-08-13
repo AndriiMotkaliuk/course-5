@@ -1,0 +1,9 @@
+@use 'sass:math';
+@import './reset';
+@import "./variables";
+@import "./extend";
+@import "./mixins";
+@import "./global";
+@import "./header/header";
+@import "./main/main";
+@import "./footer/footer";

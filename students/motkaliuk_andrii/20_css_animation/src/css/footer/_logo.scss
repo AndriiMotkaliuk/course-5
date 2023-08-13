@@ -1,0 +1,7 @@
+.footer {
+    @include media(md) {
+        text-align: center;
+    }
+
+    &_logo {}
+}
