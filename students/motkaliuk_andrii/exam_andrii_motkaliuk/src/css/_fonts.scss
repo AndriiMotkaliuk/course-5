@@ -1,0 +1,4 @@
+@include font-face('josefin-sans-v26-latin-regular', $_font-weight: 400, $_font-style: normal, $_font-family: $default-font-name);
+@include font-face('josefin-sans-v26-latin-300', $_font-weight: 300, $_font-style: normal, $_font-family: $default-font-name);
+@include font-face('josefin-sans-v26-latin-700', $_font-weight: 700, $_font-style: normal, $_font-family: $default-font-name);
+@include font-face('aleo-v12-latin-regular', $_font-weight: 400, $_font-style: normal, $_font-family: $title-font-name);
