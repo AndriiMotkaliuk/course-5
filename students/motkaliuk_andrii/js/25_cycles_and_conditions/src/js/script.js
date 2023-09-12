@@ -8,11 +8,14 @@ if (isNaN(yourAge)) {
 } else {
     if (yourAge <= 11) {
         console.log('child');
-    } else if (12 <= yourAge && yourAge <= 17) {
+    }
+    if (yourAge >= 12 && yourAge <= 17) {
         console.log('teen');
-    } else if (18 <= yourAge && yourAge <= 59) {
+    }
+    if (yourAge >= 18 && yourAge <= 59) {
         console.log('adalt');
-    } else if (60 <= yourAge) {
+    }
+    if (yourAge >= 60) {
         console.log('pensioner')
     }
 }
@@ -22,62 +25,70 @@ const numString = prompt('Enter a Number',);
 const num = Number(numString);
 switch (num) {
     case 1:
-        alert('!');
+        console.log('!');
         break;
     case 2:
-        alert('@');
+        console.log('@');
         break;
     case 3:
-        alert('#');
+        console.log('#');
         break;
     case 4:
-        alert('$');
+        console.log('$');
         break;
     case 5:
-        alert('%');
+        console.log('%');
         break;
     case 6:
-        alert('^');
+        console.log('^');
         break;
     case 7:
-        alert('&');
+        console.log('&');
         break;
     case 8:
-        alert('*');
+        console.log('*');
         break;
     case 9:
-        alert('(');
+        console.log('(');
         break;
     case 0:
-        alert(')');
+        console.log(')');
         break;
     default:
-        alert('Incorrect data');
+        console.log('Incorrect data');
 }
 
 // Підрахуй суму всіх чисел в заданому користувачем діапазоні.
-const a = +prompt('Enter First Number',);;
-const b = +prompt('Enter Second Number',);;
-const n = (b - a) + 1;
-console.log(n);
-const sum = (n / 2) * (a + b);
-console.log(sum);
+const a = 2;
+const b = 54;
+let sum = 0;
+for (let i = a; i <= b; i++) {
+    sum = sum + i;
+}
+console.log(sum)
 
 // Запитай у користувача 2 числа і знайди найбільший спільний дільник.
-const number1 = prompt('Enter First Number',);
-const number2 = prompt('Enter Second Number',);
-let c = number1;
-let d = number2;
+const number1 = +prompt('Enter First Number',);
+const number2 = +prompt('Enter Second Number',);
+let c, d;
+if (number1 > number2) {
+    c = number1;
+    d = number2;
+} else {
+    d = number1;
+    c = number2;
+}
+
 while (d !== 0) {
     const mem = c % d;
     c = d;
     d = mem;
 }
-const divider = c;
-console.log('Найбільший спільний дільник чисел ', divider);
+
+// console.log('Найбільший спільний дільник чисел ', c);
 
 // Запитай у користувача число і виведи всі дільники цього числа.
-const number = prompt('Enter First Number',);
+const number = +prompt('Enter First Number',);
 let h = number;
 for (let i = 1; i <= h; i++) {
     if (h % i === 0) {
@@ -92,17 +103,16 @@ const inp = prompt('Input 5-dig number');
 if (inp.length !== 5) {
     console.log('Rewrite. Incorrect data');
 } else {
-    let dig = inp.split("");
-    let reversedInp = dig.slice().reverse();
-    let polidrom = true;
-    for (let i = 0; i < dig.length; i++) {
-        if (dig[i] !== reversedInp[i]) {
-            polidrom = false;
-            break;
-        }
-    }
-    if (polidrom) {
-        console.log('Polindrom!');
+    const number = parseInt(inp);
+
+    const digit1 = Math.floor(number / 10000);
+    const digit2 = Math.floor((number % 10000) / 1000);
+    const digit3 = Math.floor((number % 1000) / 100);
+    const digit4 = Math.floor((number % 100) / 10);
+    const digit5 = number % 10;
+
+    if (digit1 === digit5 && digit2 === digit4) {
+        console.log('Polindrom');
     } else {
         console.log('NOT a polindrom!');
     }
@@ -117,13 +127,16 @@ if (purch < 200) {
     console.log(purch, 'No discount');
 } else if (purch >= 200 && purch < 300) {
     const purch3 = purch * 0.97;
-    console.log(purch3, '3% discount');
+    const discount3 = purch * 0.03;
+    console.log(purch3, '-3% discount; ', 'discount: ', discount3);
 } else if (purch >= 300 && purch < 500) {
     const purch5 = purch * 0.95;
-    console.log(purch5, '5% discount');
+    const discount5 = purch * 0.05;
+    console.log(purch5, '-5% discount; ', 'discount: ', discount5);
 } else {
     const purch7 = purch * 0.93;
-    console.log(purch7, '7% discount');
+    const discount7 = purch * 0.07;
+    console.log(purch7, '-7% discount; ', 'discount: ', discount7);
 }
 
 
@@ -131,36 +144,40 @@ if (purch < 200) {
 // При цьому також порахуй, скільки з них парних і непарних.Виведи статистику на екран.
 // Враховуй, що достатньо однієї змінної(не 10) для введення чисел користувачем.
 const totalNumbers = 10;
-let positiveCount = 0, negativeCount = 0, zeroCount = 0;
-let evenCount = 0, oddCount = 0;
-const input = prompt(`Введіть 10 чисел, розділених комами:`);
-const numbers = input.split(/[,]+/).map(Number);
+let positiveCount = 0;
+let negativeCount = 0;
+let zeroCount = 0;
+let evenCount = 0;
+let oddCount = 0;
 
-for (const number of numbers) {
-    if (number > 0) {
-        positiveCount++;
-        if (number % 2 === 0) {
-            evenCount++;
-        } else {
-            oddCount++;
-        }
-    } else if (number < 0) {
-        negativeCount++;
-        if (number % 2 === 0) {
-            evenCount++;
-        } else {
-            oddCount++;
-        }
+for (let i = 0; i < totalNumbers; i++) {
+    const number = parseFloat(prompt('Введіть число ' + (i + 1)));
+
+    if (isNaN(number)) {
+        console.log('Ви ввели не число. Спробуйте ще раз.');
+        i--;
     } else {
-        zeroCount++;
+        if (number > 0) {
+            positiveCount++;
+        } else if (number < 0) {
+            negativeCount++;
+        } else {
+            zeroCount++;
+        }
+
+        if (number % 2 === 0) {
+            evenCount++;
+        } else {
+            oddCount++;
+        }
     }
 }
-console.log(input)
-console.log(`Додатні: ${positiveCount}`);
-console.log(`Від’ємні: ${negativeCount}`);
-console.log(`Нулі: ${zeroCount}`);
-console.log(`Парні: ${evenCount}`);
-console.log(`Непарні: ${oddCount}`);
+
+console.log('Додатні: ' + positiveCount);
+console.log('Відємні: ' + negativeCount);
+console.log('Нулі: ' + zeroCount);
+console.log('Парні: ' + evenCount);
+console.log('Непарні: ' + oddCount);
 
 // Зацикли відображення днів тижня таким чином: «День тижня.Хочеш побачити наступний день ?»
 //  і так до тих пір, поки користувач натискає OK.
@@ -175,16 +192,20 @@ while (true) {
 }
 
 
-piramid = 5;
+const piramid = 5;
+let result = '';
 for (let i = 1; i <= piramid; i++) {
     let hash = '';
     for (let j = 1; j <= i; j++) {
         hash += '#';
     }
-    console.log(hash);
+    result += hash + '\n';
 }
+console.log(result);
 
 const piramid2 = 5;
+let result2 = '';
+
 for (let i = 1; i <= piramid2; i++) {
     let spaces = '';
     let hashes = '';
@@ -194,9 +215,10 @@ for (let i = 1; i <= piramid2; i++) {
     for (let k = 1; k <= i; k++) {
         hashes += '#';
     }
-
-    console.log(spaces + hashes);
+    result2 += spaces + hashes + '\n';
 }
+
+console.log(result2);
 
 
 //     Максимум
