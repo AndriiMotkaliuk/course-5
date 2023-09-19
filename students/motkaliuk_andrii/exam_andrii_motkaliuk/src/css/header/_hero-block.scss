@@ -6,7 +6,7 @@
 }
 
 .hero-block {
-    background-image: url(../images/header-background.png);
+    background-image: url(../images/header-background.jpg);
     background-size: cover;
     height: calc(100vh - $nav-height-desktop);
     background-position: center center;
@@ -67,15 +67,23 @@
         max-width: 647px;
         width: 100%;
         height: 60px;
-        padding: 0;
+        padding: 0 160px 0 36px;
+        box-sizing: border-box;
         font-family: $main-font;
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 2.8px;
         border: none;
 
+        @include media(xs) {
+            padding: 0 60px 0 20px;
+        }
+
         &::placeholder {
-            padding-left: 36px;
+
+            @include media(xxs) {
+                color: transparent;
+            }
         }
     }
 }
@@ -97,9 +105,8 @@
             background-color: $color-blue;
         }
 
-        @include media(xxs) {
-            position: relative;
-            margin: 20px auto;
+        @include media(xs) {
+            width: 52px;
         }
     }
 
@@ -117,6 +124,10 @@
         text-transform: uppercase;
         padding-left: 12px;
         padding-top: 2px;
+
+        @include media(xs) {
+            display: none;
+        }
     }
 }
 

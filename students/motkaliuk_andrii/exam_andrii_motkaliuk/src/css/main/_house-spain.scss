@@ -1,5 +1,5 @@
 .house-spain {
-    background-image: url(../images/house-spain.png);
+    background-image: url(../images/house-spain.jpg);
     background-size: cover;
     background-position: center center;
 
@@ -19,6 +19,10 @@
 
         @include media(md) {
             margin: 105px 0;
+        }
+
+        @include media(xs) {
+            margin: 55px 0;
         }
     }
 }
