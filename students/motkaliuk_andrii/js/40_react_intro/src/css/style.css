@@ -1,0 +1,161 @@
+@import url(fonts.css);
+
+body {
+    font-family: Lucida Sans Unicode, 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: #FFF;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 37px;
+}
+
+.main {
+    max-width: 1390px;
+    margin: 0 auto;
+    background-color: #39C;
+    border: 25px solid #2B81AC;
+}
+
+.weather-forecast__wrapper {
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+}
+
+.weather-forecast {
+    float: left;
+    border: 5px solid #FFF;
+    width: 25%;
+    box-sizing: border-box;
+    padding: 25px 60px 10px;
+}
+
+.weather-forecast:nth-of-type(n+4) {
+    border-top: none;
+}
+
+.lisabon,
+.paris,
+.venice,
+.tel-avive,
+.cair,
+.new-delhi,
+.san-francisco {
+    border-right: none;
+}
+
+.lisabon {
+    width: 50%;
+    background-color: #3399CC;
+}
+
+.paris {
+    background-color: #33CCCC;
+}
+
+.belgrade {
+    background-color: #996699;
+}
+
+.venice {
+    background-color: #C24747;
+}
+
+.tel-avive {
+    background-color: #E2674A;
+}
+
+.cair {
+    background-color: #FFCC66;
+}
+
+.new-york {
+    background-color: #99CC99;
+}
+
+.new-delhi {
+    background-color: #669999;
+}
+
+
+.san-francisco {
+    background-color: #CC6699;
+    width: 50%;
+}
+
+.tokyo {
+    background-color: #339966;
+}
+
+.sydney {
+    background-color: #666699;
+    width: 100%;
+}
+
+.clear-fix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.weather-forecast__title_wrapper {
+    display: inline-block;
+    padding-bottom: 28px;
+}
+
+.weather {
+    max-width: 80%;
+    margin: 0 auto;
+    padding-left: 28px;
+}
+
+.weather__half {
+    max-width: 30%;
+}
+
+.weather__full {
+    max-width: 15%;
+}
+
+.weather-forecast__title {
+    font-weight: 400;
+    font-size: 21px;
+    margin: 0;
+    display: inline-block;
+    padding-right: 2px;
+}
+
+.weather-forecast__city {
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    font-size: 22px;
+    display: block;
+}
+
+.weather-forecast__temp {
+    float: left;
+    padding-right: 12px;
+}
+
+
+.weather-forecast__img {
+    float: left;
+    padding-top: 10px;
+    width: 48px;
+    object-fit: cover;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+.last-massege {
+    font-size: 15px;
+}
