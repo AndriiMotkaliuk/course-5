@@ -1,7 +1,7 @@
 import React from "react";
 import NewsItem from "./NewsItem";
 
-export default function News(colClass, newsTitle) {
+export default function News({ colClass, newsTitle }) {
     return (
         <div className={colClass}>
             <div className="news">

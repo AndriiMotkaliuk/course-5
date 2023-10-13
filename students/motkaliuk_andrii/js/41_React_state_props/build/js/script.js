@@ -109,7 +109,9 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "D:\\FrontEnd\\Study\\course-5\\students\\motkaliuk_andrii\\js\\41_React_state_props\\src\\js\\components\\main\\BlogContainer.js";
 
 
-function Blog(colClass, blogTitle) {
+function Blog(_ref) {
+  var colClass = _ref.colClass,
+    blogTitle = _ref.blogTitle;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: colClass,
     __self: this,
@@ -185,7 +187,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _jsxFileName = "D:\\FrontEnd\\Study\\course-5\\students\\motkaliuk_andrii\\js\\41_React_state_props\\src\\js\\components\\main\\BlogItem.js";
 
-function BlogItem(blogItemContent) {
+function BlogItem(_ref) {
+  var blogItemContent = _ref.blogItemContent;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "blog__item",
     __self: this,
@@ -296,7 +299,9 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "D:\\FrontEnd\\Study\\course-5\\students\\motkaliuk_andrii\\js\\41_React_state_props\\src\\js\\components\\main\\NewsContainer.js";
 
 
-function News(colClass, newsTitle) {
+function News(_ref) {
+  var colClass = _ref.colClass,
+    newsTitle = _ref.newsTitle;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: colClass,
     __self: this,
@@ -372,7 +377,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _jsxFileName = "D:\\FrontEnd\\Study\\course-5\\students\\motkaliuk_andrii\\js\\41_React_state_props\\src\\js\\components\\main\\NewsItem.js";
 
-function NewsItem(newsItemContent) {
+function NewsItem(_ref) {
+  var newsItemContent = _ref.newsItemContent;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "news__item",
     __self: this,

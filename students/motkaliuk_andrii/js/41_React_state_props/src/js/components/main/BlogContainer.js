@@ -1,7 +1,7 @@
 import React from "react";
 import BlogItem from "./BlogItem";
 
-export default function Blog(colClass, blogTitle) {
+export default function Blog({ colClass, blogTitle }) {
     return (
         <div className={colClass}>
             <div className="blog">
