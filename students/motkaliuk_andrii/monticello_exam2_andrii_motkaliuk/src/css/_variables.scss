@@ -1,0 +1,49 @@
+// colors
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-steel-blue: #2C4058;
+$color-light-blue: #55B7FF;
+$color-purple: #7E5AFF;
+$color-gray: #4B5562;
+
+$default-font-color: $color-steel-blue;
+
+$default-box-shadow: 0px 5px 5px 0px rgba(75, 93, 104, 0.10);
+$border-btn-color-primary: $color-steel-blue;
+$border-height: 50px;
+$btn-font-weight: 400;
+
+$border-color: $color-steel-blue;
+$default-border: 1px solid $color-steel-blue;
+
+$default-body-color: $color-white;
+
+// fonts
+$default-font-name: 'Montserrat';
+$fallback: Arial, Helvetica, sans-serif;
+$default-font-size: 18px;
+
+$main-font: $default-font-name, $fallback;
+$font-path: './fonts/';
+
+$title-font-name: 'Montserrat';
+$title-font: $title-font-name, $fallback;
+
+// containers
+$container-padding: 15px;
+$container-max-width: 1600px;
+
+$gap: 15px;
+$default-count-col: 12;
+
+$default-width: 1600px;
+
+$res-lg-padding: 60px;
+
+$breack-points: (
+    "lg": 1360px,
+    "md": 1024px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 480px
+);

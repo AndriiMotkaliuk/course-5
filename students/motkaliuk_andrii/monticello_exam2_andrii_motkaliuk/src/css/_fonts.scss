@@ -1,0 +1,5 @@
+@include font-face('montserrat-v25-latin-regular', $_font-weight: 400, $_font-style: normal, $_font-family: $default-font-name);
+@include font-face('montserrat-v25-latin-700', $_font-weight: 700, $_font-style: normal, $_font-family: $default-font-name);
+
+@include font-face('open-sans-v36-latin-regular', $_font-weight: 400, $_font-style: normal, $_font-family: 'Open Sans');
+@include font-face('open-sans-v36-latin-italic', $_font-weight: 400, $_font-style: italic, $_font-family: 'Open Sans');

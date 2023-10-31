@@ -1,0 +1,21 @@
+.btn {
+    @include font-family(400, 16px, $color-black, 20px, 1.12px, $title-font-name, normal);
+    text-decoration: none;
+    @extend %flex-jcc-aic;
+    width: 213px;
+    height: 60px;
+
+    border: $default-border;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    background-color: $color-white;
+}
+
+.btn-blue {
+    background-color: $color-white;
+    color: $color-black;
+
+    &:hover {
+        background-color: $color-purple;
+    }
+}

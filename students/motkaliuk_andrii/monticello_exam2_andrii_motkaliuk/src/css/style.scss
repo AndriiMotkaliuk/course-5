@@ -1,0 +1,15 @@
+@use 'sass:math';
+@import '../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/slick-carousel/slick/slick-theme.scss';
+
+@import "./variables";
+@import "./extend";
+@import "./mixins";
+@import "./lightbox";
+@import "./fonts";
+@import "./reset";
+@import "./global";
+@import "./header/header";
+@import "./main/main";
+@import "./footer/footer";

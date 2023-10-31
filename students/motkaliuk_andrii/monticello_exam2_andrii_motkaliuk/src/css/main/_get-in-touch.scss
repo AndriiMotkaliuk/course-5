@@ -1,0 +1,143 @@
+.get-in-touch {
+    position: relative;
+}
+
+.map {
+    width: 100%;
+    height: 700px;
+
+    &>iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.form-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 770px;
+    width: 100%;
+    padding: 60px;
+    background-color: $color-white;
+    z-index: 10;
+
+    @include media(sm) {
+        position: relative;
+    }
+
+    @include media(xs) {
+        padding: 60px 0;
+    }
+
+    &::after {
+        content: "";
+        background: url('../../images/painted-city.png') no-repeat bottom;
+        background-size: contain;
+        opacity: 0.1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    &__title {
+        color: $color-steel-blue;
+        text-align: center;
+        font-size: 44px;
+        font-weight: 700;
+
+        margin: 0;
+        margin: 30px 0 40px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            max-width: 100px;
+            width: 100%;
+            height: 1px;
+            background-color: $color-steel-blue;
+            top: -30px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.info {
+    &__item {
+        display: inline;
+    }
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+
+    &__image {
+        width: 24px;
+        height: 24px;
+        fill: $color-purple;
+    }
+
+    &__description {
+        margin: 0;
+        padding: 10px;
+
+        color: $color-black;
+        text-decoration: none;
+    }
+}
+
+.form {
+    & input {
+        width: 100%;
+        color: $color-black;
+        font-family: Montserrat, $fallback;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        border: none;
+        border-bottom: 1px solid $color-steel-blue;
+        padding: 10px 5px;
+        margin-bottom: 30px;
+        background: transparent;
+    }
+
+    &__input-wrap {
+        position: relative;
+    }
+}
+
+.btn-continer {
+    @include media(sm) {
+        text-align: center;
+    }
+}
+
+.form-btn {
+    width: 140px;
+    height: 50px;
+    color: $color-black;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid $color-steel-blue;
+    float: right;
+
+    @include media(sm) {
+        float: none;
+    }
+}
+
+.just-validate-error-label {
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 3px;
+}
