@@ -71,7 +71,7 @@
         border: 2px solid transparent;
 
         &::before {
-            content: url("../../images/ellipse-3.svg");
+            content: url("../images/ellipse-3.svg");
             padding-right: 5px;
 
             @include media(lg) {
@@ -85,7 +85,7 @@
             transition: border .5s ease-in-out;
 
             &::before {
-                content: url("../../images/ellipse-4.svg");
+                content: url("../images/ellipse-4.svg");
             }
         }
     }
