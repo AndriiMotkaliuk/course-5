@@ -34,7 +34,7 @@ function App() {
     fetchWeather();
   }, [query, units]);
 
-  const fortamBackground = () => {
+  const formatBackground = () => {
     if (!weather) return 'from-cyan-700 to-blue-700'
     const threshold = units === 'metric' ? 20 : 60
     if (weather.temp <= threshold) return 'from-cyan-700 to-blue-700'
@@ -43,7 +43,7 @@ function App() {
   }
 
   return (
-    <div className={`mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br from-cyan-700 to-blue-700 h-fit shadow-xl shadow-gray-400 ${fortamBackground}`}>
+    <div className={`mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br from-cyan-700 to-blue-700 h-fit shadow-xl shadow-gray-400 ${formatBackground()}`}>
       <TopButtons setQuery={setQuery} />
       <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
 
@@ -56,7 +56,7 @@ function App() {
         </div>
       )}
 
-      <ToastContainer autoClose={5000} theme='colored' newestOnTop={true} />
+      <ToastContainer autoClose={1000} theme='colored' newestOnTop={true} />
 
 
     </div>
