@@ -1,7 +1,7 @@
-import $ from 'jquery';
 import 'slick-carousel';
 import 'lightbox2';
-
+import './gallery';
+import './galleryFormater';
 import './hero-slider';
 import './news-slider';
 import './menu';

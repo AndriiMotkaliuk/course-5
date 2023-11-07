@@ -33,6 +33,72 @@ function createFormValidation(form) {
 
 /***/ }),
 
+/***/ "./src/js/gallery.js":
+/*!***************************!*\
+  !*** ./src/js/gallery.js ***!
+  \***************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var seeMoreButton = document.querySelector('.gallery__btn');
+var galleryOpenItems = document.querySelectorAll('.gallery-item__hidden');
+var galleryOpenVisible = true;
+seeMoreButton.addEventListener('click', function (event) {
+  event.preventDefault();
+  if (galleryOpenVisible) {
+    galleryOpenItems.forEach(function (item) {
+      item.classList.remove('gallery-item__hidden-on');
+    });
+  } else {
+    galleryOpenItems.forEach(function (item) {
+      item.classList.add('gallery-item__hidden-on');
+    });
+  }
+  galleryOpenVisible = !galleryOpenVisible;
+});
+
+/***/ }),
+
+/***/ "./src/js/galleryFormater.js":
+/*!***********************************!*\
+  !*** ./src/js/galleryFormater.js ***!
+  \***********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var seeMoreButton = document.querySelector('.gallery__btn');
+var galleryAdvancedGrid = document.querySelectorAll('.gallery-grid');
+var galleryAdvancedGridFalse = true;
+seeMoreButton.addEventListener('click', function (event) {
+  event.preventDefault();
+  if (galleryAdvancedGridFalse) {
+    galleryAdvancedGrid.forEach(function (item) {
+      item.classList.add('gallery-grid_advanced');
+    });
+  } else {
+    galleryAdvancedGrid.forEach(function (item) {
+      item.classList.remove('gallery-grid_advanced');
+    });
+  }
+  galleryAdvancedGridFalse = !galleryAdvancedGridFalse;
+});
+
+/***/ }),
+
 /***/ "./src/js/hero-slider.js":
 /*!*******************************!*\
   !*** ./src/js/hero-slider.js ***!
@@ -200,16 +266,17 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.news-slider').slick({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var lightbox2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lightbox2 */ "./node_modules/lightbox2/dist/js/lightbox.js");
-/* harmony import */ var lightbox2__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lightbox2__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _hero_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./hero-slider */ "./src/js/hero-slider.js");
-/* harmony import */ var _news_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./news-slider */ "./src/js/news-slider.js");
-/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./menu */ "./src/js/menu.js");
-/* harmony import */ var _formValidation_createFormValidation_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./formValidation/createFormValidation.js */ "./src/js/formValidation/createFormValidation.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lightbox2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lightbox2 */ "./node_modules/lightbox2/dist/js/lightbox.js");
+/* harmony import */ var lightbox2__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lightbox2__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _gallery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./gallery */ "./src/js/gallery.js");
+/* harmony import */ var _galleryFormater__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./galleryFormater */ "./src/js/galleryFormater.js");
+/* harmony import */ var _hero_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./hero-slider */ "./src/js/hero-slider.js");
+/* harmony import */ var _news_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./news-slider */ "./src/js/news-slider.js");
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./menu */ "./src/js/menu.js");
+/* harmony import */ var _formValidation_createFormValidation_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./formValidation/createFormValidation.js */ "./src/js/formValidation/createFormValidation.js");
+
 
 
 
@@ -218,7 +285,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var form = document.querySelector('#user-form');
-(0,_formValidation_createFormValidation_js__WEBPACK_IMPORTED_MODULE_6__["default"])(form);
+(0,_formValidation_createFormValidation_js__WEBPACK_IMPORTED_MODULE_7__["default"])(form);
 
 /***/ }),
 
@@ -18630,6 +18697,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	__webpack_require__("./src/js/gallery.js");
+/******/ 	__webpack_require__("./src/js/galleryFormater.js");
 /******/ 	__webpack_require__("./src/js/hero-slider.js");
 /******/ 	__webpack_require__("./src/js/menu.js");
 /******/ 	__webpack_require__("./src/js/news-slider.js");
