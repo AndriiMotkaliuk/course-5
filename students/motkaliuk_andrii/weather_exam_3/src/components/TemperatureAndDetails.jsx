@@ -22,7 +22,7 @@ function TemperatureAndDetails({ weather: {
                 <img
                     src={iconUrlFromCode(icon)}
                     alt=""
-                    className='w-20' />
+                    className='w-35' />
                 <p className='text-5xl'>{`${temp.toFixed()}°`}</p>
                 <div className='flex flex-col space-y-2'>
                     <div className='flex font-light text-sm items-center justify-center'>
