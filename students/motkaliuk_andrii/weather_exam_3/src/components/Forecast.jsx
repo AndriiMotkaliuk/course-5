@@ -1,5 +1,6 @@
 import React from 'react'
 import { iconUrlFromCode } from '../services/weatherService'
+import { v4 as uuidv4 } from 'uuid';
 
 function Forecast({ title, items }) {
     return (
@@ -14,12 +15,12 @@ function Forecast({ title, items }) {
 
                 {items.map((item) => (
 
-                    <div className='flex flex-col items-center justify-center'>
+                    <div key={uuidv4()} className='flex flex-col items-center justify-center'>
                         <p className='font-light text-sm'>{item.title}</p>
                         <img
                             src={iconUrlFromCode(item.icon)}
                             alt=""
-                            className='w-12 my-1' />
+                            className='w-14 my-1' />
                         <p className='font-medium'>{`${item.temp.toFixed()}°`}</p>
                     </div>
 
