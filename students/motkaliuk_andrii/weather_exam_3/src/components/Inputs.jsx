@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import { UilSearch, UilLocationPoint } from '@iconscout/react-unicons';
 import { toast } from 'react-toastify';
+import { useRef } from 'react';
+import { useEffect } from 'react';
+import AutoComplete from './AutoComplete';
 
 function Inputs({ setQuery, units, setUnits }) {
+
+    const [cityList, setCityList] = useState([]);
+
+    const searchInput = useRef();
 
     const [city, setCity] = useState('');
 
@@ -11,8 +18,21 @@ function Inputs({ setQuery, units, setUnits }) {
         if (units !== selectedUnit) setUnits(selectedUnit);
     };
 
+    const addCityToAutoComplete = () => {
+        if (!cityList.includes(city)) {
+            setCityList([
+                ...cityList,
+                city
+            ])
+        }
+
+    }
+
     const handleSearchClick = () => {
-        if (city !== '') setQuery({ q: city })
+        if (city !== '') {
+            setQuery({ q: city });
+            addCityToAutoComplete();
+        }
     }
 
     const handleLocationClick = () => {
@@ -31,6 +51,19 @@ function Inputs({ setQuery, units, setUnits }) {
         }
     };
 
+    useEffect(() => {
+        console.log(searchInput)
+    }, []);
+
+    const showAutoComplete = () => {
+        console.log(111)
+    }
+
+    const selectAutocompleteHeandler = (cityForAutocmplete) => {
+        setCity(cityForAutocmplete)
+        setQuery({ q: cityForAutocmplete })
+    }
+
     return (
         <div className='flex flex-row justify-center my-6'>
             <div className='flex flex-row w-3/4 items-center justify-center space-x-4'>
@@ -40,6 +73,9 @@ function Inputs({ setQuery, units, setUnits }) {
                     type="text"
                     className='text-xl font-light p-2 w-full shadow-xl focus:outline-none capitalize placeholder:lowercase'
                     placeholder='Search for city...'
+                    ref={searchInput}
+                    onFocus={showAutoComplete}
+
                 />
                 <UilSearch
                     size={25}
@@ -50,6 +86,10 @@ function Inputs({ setQuery, units, setUnits }) {
                     size={25}
                     className="text-white cursor-pointer transition ease-in-out hover:scale-125"
                     onClick={handleLocationClick} />
+            </div>
+
+            <div>
+                <AutoComplete autoCompleteList={cityList} selectHeandler={selectAutocompleteHeandler} />
             </div>
 
             <div className='flex flex-row w-1/4 items-center justify-center'>
