@@ -1,14 +1,21 @@
 import { DateTime } from "luxon";
+import cashData from "./cashData.js";
 
 const API_KEY = '28052ef3f37b4d06c897ccce40989d6d';
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
-const getWeatherData = (infoType, searchParams) => {
+const getWeatherData = async (infoType, searchParams) => {
     const url = new URL(BASE_URL + '/' + infoType);
-    url.search = new URLSearchParams({ ...searchParams, appid: API_KEY })
+    url.search = new URLSearchParams({ ...searchParams, appid: API_KEY });
+    const cashedData = cashData(url.toString());
+    if (cashedData) {
+        return cashedData
+    }
 
-    return fetch(url)
-        .then((res) => res.json())
+    const res = await fetch(url);
+    const data = await res.json();
+    cashData(url.toString(), data);
+    return data
 };
 
 const formatCurrentWeather = (data) => {

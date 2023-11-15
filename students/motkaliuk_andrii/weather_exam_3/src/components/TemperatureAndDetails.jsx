@@ -56,7 +56,7 @@ function TemperatureAndDetails({ weather: {
 
                 <UilSunset />
                 <p className='font-light'>
-                    Rise: <span className='font-medium ml-1'>{formatToLocalTime(sunset, timezone, 'hh:mm a')}</span>
+                    Set: <span className='font-medium ml-1'>{formatToLocalTime(sunset, timezone, 'hh:mm a')}</span>
                 </p>
 
                 <p className='font-light'>|</p>

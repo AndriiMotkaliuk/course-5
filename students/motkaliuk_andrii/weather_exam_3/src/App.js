@@ -10,11 +10,13 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/Header';
 import { Outlet } from 'react-router-dom';
+import rainy_image from './images/rainy_image.jpg';
+
 
 
 function App() {
 
-  const [query, setQuery] = useState({ q: 'berlin' });
+  const [query, setQuery] = useState({ q: 'kyiv' });
   const [units, setUnits] = useState('metric');
   const [weather, setWeather] = useState(null);
 
@@ -36,6 +38,10 @@ function App() {
     fetchWeather();
   }, [query, units]);
 
+  const getBackgraundImage = () => {
+    console.log(weather)
+  }
+
   const formatBackground = () => {
     if (!weather) return 'from-cyan-700 to-blue-700'
     const threshold = units === 'metric' ? 20 : 60
@@ -47,23 +53,24 @@ function App() {
 
   return (
 
-    <div className={`mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br from-cyan-700 to-blue-700 h-fit shadow-xl shadow-gray-400 ${formatBackground()}`}>
-      {/* <Header /> */}
-      <TopButtons setQuery={setQuery} />
-      <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
+    <div style={{ backgroundImage: `url(${rainy_image})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', }}>
+      <div className={`mx-auto max-w-screen-md py-5 px-32 bg-gradient-to-br from-cyan-700/50 to-blue-700/50  h-fit shadow-xl shadow-gray-400 ${formatBackground()}`}>
 
-      {weather && (
-        <div>
-          <TimeAndLocation weather={weather} />
-          <TemperatureAndDetails weather={weather} />
-          <Forecast title="Hourly forecast" items={weather.hourly} />
-          <Forecast title="Daily forecast" items={weather.daily} />
-        </div>
-      )}
+        <TopButtons setQuery={setQuery} />
+        <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
 
-      <ToastContainer autoClose={1000} theme='colored' newestOnTop={true} />
-      {/* <Outlet /> */}
+        {weather && (
+          <div>
+            <TimeAndLocation weather={weather} />
+            <TemperatureAndDetails weather={weather} />
+            <Forecast title="Hourly forecast" items={weather.hourly} />
+            <Forecast title="Daily forecast" items={weather.daily} />
+          </div>
+        )}
 
+        <ToastContainer autoClose={1000} theme='colored' newestOnTop={true} />
+
+      </div>
     </div>
 
   );
