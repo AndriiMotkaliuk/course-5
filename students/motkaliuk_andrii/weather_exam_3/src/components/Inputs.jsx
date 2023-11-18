@@ -85,20 +85,24 @@ function Inputs({ setQuery, units, setUnits }) {
 
     return (
         <div className='flex flex-row justify-center my-6'>
-            <div className='flex flex-row w-3/4 items-center justify-center gap-4 relative'>
+            <div className='flex flex-row w-3/4  items-center justify-center gap-4 relative'>
                 <input
                     value={city}
                     onChange={(e) => setCity(e.currentTarget.value)}
                     type="text"
-                    className='text-xl font-light p-2 w-full shadow-xl focus:outline-none capitalize placeholder:lowercase'
+                    className='text-xl font-light p-2 w-full shadow-xl focus:outline-none capitalize placeholder:lowercase rounded'
                     placeholder='Search for city...'
                     ref={searchInput}
                     onFocus={showAutoComplete}
                     onBlur={() => { setTimeout(() => { setIsShowAutocomplet(false) }, 300) }}
-
-
                 />
-                <UilSearch
+
+                {isShowAutocomplet ?
+                    <div className="absolute top-full left-0 bg-white w-[81%] ">
+                        <AutoComplete autoCompleteList={cityList} selectHeandler={selectAutocompleteHeandler} />
+                    </div> : null}
+
+                {/* <UilSearch
                     size={25}
                     className="text-white cursor-pointer transition ease-in-out hover:scale-125"
                     onClick={handleSearchClick}
@@ -106,12 +110,19 @@ function Inputs({ setQuery, units, setUnits }) {
                 <UilLocationPoint
                     size={25}
                     className="text-white cursor-pointer transition ease-in-out hover:scale-125"
-                    onClick={handleLocationClick} />
+                    onClick={handleLocationClick} /> */}
+            </div>
 
-                {isShowAutocomplet ?
-                    <div className="absolute top-full left-0 bg-white w-[81%] ">
-                        <AutoComplete autoCompleteList={cityList} selectHeandler={selectAutocompleteHeandler} />
-                    </div> : null}
+            <div className='flex flex-row items-center justify-center gap-4 relative px-2'>
+                <UilSearch
+                    size={20}
+                    className="text-white cursor-pointer transition ease-in-out hover:scale-125"
+                    onClick={handleSearchClick}
+                />
+                <UilLocationPoint
+                    size={20}
+                    className="text-white cursor-pointer transition ease-in-out hover:scale-125"
+                    onClick={handleLocationClick} />
             </div>
 
             <div className='flex flex-row w-1/4 items-center justify-center'>

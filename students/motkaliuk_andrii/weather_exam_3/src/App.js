@@ -8,9 +8,18 @@ import getFormattedWeatherData from './services/weatherService';
 import { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Header from './components/Header';
-import { Outlet } from 'react-router-dom';
-import rainy_image from './images/rainy_image.jpg';
+
+import clear_sky_image from './images/01_clear_sky.jpg';
+import few_clouds_image from './images/02_few_clouds.jpg';
+import scattered_clouds_image from './images/03_scattered_clouds.jpg';
+import broken_clouds_image from './images/04_broken-clouds.jpg';
+import shower_rain_image from './images/09_shower_rain.jpg';
+import rain_image from './images/10_rain.jpg';
+import thunderstorm_image from './images/11_thunderstorm.jpg';
+import snow_image from './images/13_snow.jpg';
+import mist_image from './images/50_mist.jpg';
+
+
 
 
 
@@ -38,23 +47,53 @@ function App() {
     fetchWeather();
   }, [query, units]);
 
-  const getBackgraundImage = () => {
-    console.log(weather)
-  }
+  // const getBackgraundImage = () => {
+  //   console.log(weather)
+  // }
 
-  const formatBackground = () => {
-    if (!weather) return 'from-cyan-700 to-blue-700'
-    const threshold = units === 'metric' ? 20 : 60
-    if (weather.temp <= threshold) return 'from-cyan-700 to-blue-700'
+  const getBackgroundImage = () => {
+    if (!weather) return
+    console.log(weather.icon)
 
+    switch (weather.icon) {
+      case '01n':
+      case '01d':
+        return clear_sky_image;
+      case '02d':
+        return few_clouds_image;
+      case '03n':
+        return scattered_clouds_image;
+      case '04n':
+      case '04d':
+        return broken_clouds_image;
+      case '09d':
+        return shower_rain_image;
+      case '10d':
+        return rain_image;
+      case '11d':
+        return thunderstorm_image;
+      case '13d':
+        return snow_image;
+      case '50d':
+        return mist_image;
+      default:
+        return few_clouds_image;
+    }
+  };
 
-    return 'from-yellow-700 to-orange-700'
-  }
+  // const formatBackground = () => {
+
+  //   const iconCode = weather.weather[0]?.icon;
+  //   const backgroundUrl = getBackgroundImage(iconCode);
+
+  //   return `url(${backgroundUrl})`;
+  // };
+
 
   return (
 
-    <div style={{ backgroundImage: `url(${rainy_image})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', }}>
-      <div className={`mx-auto max-w-screen-md py-5 px-32 bg-gradient-to-br from-cyan-700/50 to-blue-700/50  h-fit shadow-xl shadow-gray-400 ${formatBackground()}`}>
+    <div style={{ backgroundImage: `url(${getBackgroundImage()})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: '100vh', padding: '3vh 10px' }}  >
+      <div className={`mx-auto max-w-screen-md py-5 px-5 md:px-32 bg-gradient-to-br from-gray-700/70 to-gray-500/80  h-fit shadow-xl shadow-gray-400 rounded-2xl`}>
 
         <TopButtons setQuery={setQuery} />
         <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
@@ -71,7 +110,7 @@ function App() {
         <ToastContainer autoClose={1000} theme='colored' newestOnTop={true} />
 
       </div>
-    </div>
+    </div >
 
   );
 }

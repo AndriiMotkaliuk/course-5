@@ -1,6 +1,9 @@
 const timeOffset = 3600 * 1000;
 
 const isTimeout = (time) => {
+    console.log(time)
+    console.log(Date.now())
+    console.log(timeOffset)
     return (Date.now() - time) < timeOffset;
 }
 
