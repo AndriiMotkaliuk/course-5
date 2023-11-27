@@ -31,17 +31,17 @@ function App() {
 
   useEffect(() => {
     const fetchWeather = async () => {
-      const message = query.q ? query.q : "current location."
+      try {
+        const message = query.q ? query.q : "current location.";
+        toast.info('Fetching weather for ' + message);
 
-      toast.info('Fetching weather for ' + message)
-
-      await getFormattedWeatherData({ ...query, units }).then(
-        (data) => {
-          console.log(data)
-          toast.success(`Successfuly fetched weather for ${data.name}, ${data.country}`)
-
-          setWeather(data);
-        });
+        const data = await getFormattedWeatherData({ ...query, units });
+        toast.success(`Successfuly fetched weather for ${data.name}, ${data.country}`);
+        setWeather(data);
+      } catch (error) {
+        console.error('Error fetching weather:', error);
+        toast.error('Failed to fetch weather data');
+      }
     };
 
     fetchWeather();
@@ -53,7 +53,7 @@ function App() {
 
   const getBackgroundImage = () => {
     if (!weather) return
-    console.log(weather.icon)
+    // console.log(weather.icon)
 
     switch (weather.icon) {
       case '01n':
@@ -92,7 +92,14 @@ function App() {
 
   return (
 
-    <div style={{ backgroundImage: `url(${getBackgroundImage()})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: '100vh', padding: '3vh 10px' }}  >
+    <div style={{
+      backgroundImage: `url(${getBackgroundImage()})`,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      verticalAlign: 'top',
+      height: '100%',
+      padding: '10px 10px'
+    }}  >
       <div className={`mx-auto max-w-screen-md py-5 px-5 md:px-32 bg-gradient-to-br from-gray-700/70 to-gray-500/80  h-fit shadow-xl shadow-gray-400 rounded-2xl`}>
 
         <TopButtons setQuery={setQuery} />

@@ -11,3 +11,4 @@ function AutoComplete({ autoCompleteList, selectHeandler }) {
 }
 
 export default AutoComplete;
+

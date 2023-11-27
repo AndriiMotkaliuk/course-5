@@ -70,7 +70,7 @@ function Inputs({ setQuery, units, setUnits }) {
     };
 
     useEffect(() => {
-        console.log(searchInput)
+        // console.log(searchInput)
 
     }, []);
 
@@ -83,12 +83,19 @@ function Inputs({ setQuery, units, setUnits }) {
         setQuery({ q: cityForAutocmplete })
     }
 
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            handleSearchClick();
+        }
+    };
+
     return (
         <div className='flex flex-row justify-center my-6'>
             <div className='flex flex-row w-3/4  items-center justify-center gap-4 relative'>
                 <input
                     value={city}
                     onChange={(e) => setCity(e.currentTarget.value)}
+                    onKeyPress={handleKeyPress}
                     type="text"
                     className='text-xl font-light p-2 w-full shadow-xl focus:outline-none capitalize placeholder:lowercase rounded'
                     placeholder='Search for city...'
