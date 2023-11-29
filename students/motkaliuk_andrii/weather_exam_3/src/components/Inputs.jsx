@@ -105,19 +105,9 @@ function Inputs({ setQuery, units, setUnits }) {
                 />
 
                 {isShowAutocomplet ?
-                    <div className="absolute top-full left-0 bg-white w-[81%] ">
+                    <div className="absolute top-full left-0 bg-white w-[100%] ">
                         <AutoComplete autoCompleteList={cityList} selectHeandler={selectAutocompleteHeandler} />
                     </div> : null}
-
-                {/* <UilSearch
-                    size={25}
-                    className="text-white cursor-pointer transition ease-in-out hover:scale-125"
-                    onClick={handleSearchClick}
-                />
-                <UilLocationPoint
-                    size={25}
-                    className="text-white cursor-pointer transition ease-in-out hover:scale-125"
-                    onClick={handleLocationClick} /> */}
             </div>
 
             <div className='flex flex-row items-center justify-center gap-4 relative px-2'>
