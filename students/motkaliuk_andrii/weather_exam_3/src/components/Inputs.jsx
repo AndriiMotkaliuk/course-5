@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import { useRef } from 'react';
 import { useEffect } from 'react';
 import AutoComplete from './AutoComplete';
+import getWeatherData from '../services/weatherService'
 
 function Inputs({ setQuery, units, setUnits }) {
 
@@ -14,7 +15,7 @@ function Inputs({ setQuery, units, setUnits }) {
         }
     );
 
-    const [isShowAutocomplet, setIsShowAutocomplet] = useState(false);
+    const [isShowAutocomplete, setIsShowAutocomplet] = useState(false);
 
     const searchInput = useRef();
 
@@ -45,6 +46,28 @@ function Inputs({ setQuery, units, setUnits }) {
             )
         }
     }
+    //пробував цей код замість того що вище, але тоді там помилки вискакують
+
+    // const addCityToAutoComplete = async () => {
+    //     if (city !== '' && !cityList.includes(city)) {
+    //         try {
+    //             const response = await getWeatherData('weather', { q: city });
+    //             if (response.cod === 200) {
+    //                 setCityList((currentData) => {
+    //                     const newData = [...currentData, city];
+    //                     localStorage.setItem('autoCompleteList', JSON.stringify(newData));
+    //                     return newData;
+    //                 });
+    //             } else {
+    //                 toast.error('Invalid city. Please try again.');
+    //             }
+    //         } catch (error) {
+    //             console.error('Error fetching data:', error);
+    //             toast.error('An error occurred. Please try again later.');
+    //         }
+    //     }
+    // };
+
 
     const handleSearchClick = () => {
         if (city !== '') {
@@ -78,10 +101,16 @@ function Inputs({ setQuery, units, setUnits }) {
         setIsShowAutocomplet(true)
     }
 
-    const selectAutocompleteHeandler = (cityForAutocmplete) => {
+    const selectAutocompleteHandler = (cityForAutocmplete) => {
         setCity(cityForAutocmplete)
         setQuery({ q: cityForAutocmplete })
     }
+
+    const removeAutocompleteHandler = (cityToRemove) => {
+        const updatedList = cityList.filter((item) => item !== cityToRemove);
+        setCityList(updatedList);
+        localStorage.setItem('autoCompleteList', JSON.stringify(updatedList));
+    };
 
     const handleKeyPress = (e) => {
         if (e.key === 'Enter') {
@@ -104,10 +133,15 @@ function Inputs({ setQuery, units, setUnits }) {
                     onBlur={() => { setTimeout(() => { setIsShowAutocomplet(false) }, 300) }}
                 />
 
-                {isShowAutocomplet ?
-                    <div className="absolute top-full left-0 bg-white w-[100%] ">
-                        <AutoComplete autoCompleteList={cityList} selectHeandler={selectAutocompleteHeandler} />
-                    </div> : null}
+                {isShowAutocomplete ? (
+                    <div className="absolute top-full left-0 bg-white w-[100%]">
+                        <AutoComplete
+                            autoCompleteList={cityList}
+                            selectHandler={selectAutocompleteHandler}
+                            removeHandler={removeAutocompleteHandler}
+                        />
+                    </div>
+                ) : null}
             </div>
 
             <div className='flex flex-row items-center justify-center gap-4 relative px-2'>
