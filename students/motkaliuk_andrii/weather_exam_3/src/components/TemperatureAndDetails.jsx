@@ -15,7 +15,7 @@ function TemperatureAndDetails({ weather: {
 }) {
     return (
         <div>
-            <div className='flex items-center justify-center py-6 text-xl text-cyan-300'>
+            <div className='flex items-center justify-center py-6 text-xl text-cyan-50'>
                 <p>{details}</p>
             </div>
             <div className='flex flex-row items-center justify-between text-white py-3'>
@@ -46,32 +46,35 @@ function TemperatureAndDetails({ weather: {
                 </div>
             </div>
 
-            <div className='flex flex-row items-center justify-center space-x-2 text-white text-sm py-3'>
-                <UilSun />
-                <p className='font-light'>
-                    Rise: <span className='font-medium ml-1'>{formatToLocalTime(sunrise, timezone, 'hh:mm a')}</span>
-                </p>
+            <div className='flex flex-row items-center justify-center flex-wrap'>
+                <div className='flex flex-row items-center justify-center space-x-2 text-white text-sm py-3 w-full md:w-7/12'>
+                    <UilSun />
+                    <p className='font-light whitespace-nowrap'>
+                        Rise: <span className='font-medium ml-1'>{formatToLocalTime(sunrise, timezone, 'hh:mm a')}</span>
+                    </p>
 
-                <p className='font-light'>|</p>
+                    <p className='font-light'>|</p>
 
-                <UilSunset />
-                <p className='font-light'>
-                    Rise: <span className='font-medium ml-1'>{formatToLocalTime(sunset, timezone, 'hh:mm a')}</span>
-                </p>
+                    <UilSunset />
+                    <p className='font-light whitespace-nowrap'>
+                        Set: <span className='font-medium ml-1'>{formatToLocalTime(sunset, timezone, 'hh:mm a')}</span>
+                    </p>
 
-                <p className='font-light'>|</p>
+                    <p className='font-light hidden md:inline'>|</p>
+                </div>
+                <div className='flex flex-row items-center justify-center space-x-2 text-white text-sm py-3 w-full md:w-5/12'>
+                    <UilTemperaturePlus />
+                    <p className='font-light'>
+                        High: <span className='font-medium ml-1'>{`${temp_max.toFixed()}°`}</span>
+                    </p>
 
-                <UilTemperaturePlus />
-                <p className='font-light'>
-                    High: <span className='font-medium ml-1'>{`${temp_max.toFixed()}°`}</span>
-                </p>
+                    <p className='font-light'>|</p>
 
-                <p className='font-light'>|</p>
-
-                <UilTemperatureMinus />
-                <p className='font-light'>
-                    Low: <span className='font-medium ml-1'>{`${temp_min.toFixed()}°`}</span>
-                </p>
+                    <UilTemperatureMinus />
+                    <p className='font-light'>
+                        Low: <span className='font-medium ml-1'>{`${temp_min.toFixed()}°`}</span>
+                    </p>
+                </div>
             </div>
 
         </div>
